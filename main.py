@@ -1,17 +1,16 @@
 import customtkinter as ctk
 import random
 
-# ---------------- SETTINGS ----------------
+
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("dark-blue")
 
-# ---------------- FONTS ----------------
+
 FONT_TITLE = ("Helvetica", 26, "bold")
 FONT_QUESTION = ("Helvetica", 16)
 FONT_SCORE = ("Helvetica", 14, "bold")
 FONT_RESULT = ("Helvetica", 14)
 
-# ---------------- COLORS ----------------
 BG_COLOR = "#0a192f"
 PANEL_COLOR = "#112240"
 PRIMARY_COLOR = "#64ffda"
@@ -19,7 +18,6 @@ ACCENT_COLOR = "#64ffda"
 ERROR_COLOR = "#ff6b6b"
 TEXT_COLOR = "#ccd6f6"
 
-# ---------------- QUESTIONS ----------------
 questions = [
     {"question": "What is the capital of France?", "answer": ["paris"]},
     {"question": "What planet is known as the Red Planet?", "answer": ["mars"]},
@@ -151,7 +149,7 @@ question_label = ctk.CTkLabel(
 )
 question_label.pack(expand=True)
 
-# ---------------- ANSWER ENTRY ----------------
+
 answer_entry = ctk.CTkEntry(
     window,
     width=350,
@@ -163,7 +161,7 @@ answer_entry.pack(pady=10)
 
 answer_entry.bind("<Return>", submit_with_enter)
 
-# ---------------- BUTTONS ----------------
+
 button_frame = ctk.CTkFrame(
     window,
     fg_color="transparent"
@@ -191,7 +189,7 @@ reset_button = ctk.CTkButton(
 )
 reset_button.grid(row=0, column=1, padx=10)
 
-# ---------------- RESULT LABEL ----------------
+
 result_label = ctk.CTkLabel(
     window,
     text="",
@@ -200,7 +198,7 @@ result_label = ctk.CTkLabel(
 )
 result_label.pack(pady=15)
 
-# ---------------- START QUIZ ----------------
+
 show_question()
 
 window.mainloop()
